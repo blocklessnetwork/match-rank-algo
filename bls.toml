@@ -1,0 +1,16 @@
+name = "presidential-amaranth-stingray"
+version = "1.0.0"
+
+[deployment]
+permission = "private"
+nodes = 4
+
+[build]
+dir = "build"
+entry = "presidential-amaranth-stingray_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "presidential-amaranth-stingray.wasm"
+command = "npm run build:release"
