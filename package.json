@@ -14,6 +14,7 @@
     "@blockless/sdk": "^1.0.0",
     "as-wasi": "^0.4.6",
     "assemblyscript": "^0.20.10",
+    "assemblyscript-json": "^1.1.0",
     "typescript": "^4.9.5",
     "wasi": "^0.0.6"
   },
