@@ -7,9 +7,8 @@ export function createPDB(numElements: i32, difference: i32): Uint8Array[] {
   for (let i = 0; i < numElements; i++) {
     // Construct necessary object
     let encoder = new JSONEncoder();
-    encoder.pushObject("obj");
-    encoder.setInteger("int", 10);
-    encoder.setString("str", `${(difference * i) % numElements}`);
+    encoder.pushObject(null);
+    encoder.setString("value", `${(difference * i) % numElements}`);
     encoder.popObject();
 
     let json: Uint8Array = encoder.serialize();
