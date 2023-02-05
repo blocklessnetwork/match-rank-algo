@@ -1,8 +1,15 @@
-// use generated bindings
+// these tests use generated bindings
+// milage may vary in other languages
+import { test } from "node:test";
+import assert from "assert";
 import { createPDB } from "./build/release.js";
 
-async function main() {
-  console.log(createPDB(5, 2));
-}
+test("pdb should return all 0s", async (t) => {
+  let result = createPDB(5, 0);
 
-main().then(() => console.log("Done"));
+  result.forEach((value, idx) => {
+    var element = JSON.parse(`{${new TextDecoder().decode(value)}}`);
+  });
+
+  assert(result.length, 5);
+});

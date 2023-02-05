@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf build",
-    "build:release": "npm run clean; asc index.ts --target release --bindings",
-    "build:debug": "npm run clean; asc index.ts --target debug --bindings"
+    "build:release": "npm run clean; asc src/index.ts --target release --bindings",
+    "build:debug": "npm run clean; asc src/index.ts --target debug --bindings",
+    "test": "node test.js"
   },
   "dependencies": {
     "@assemblyscript/loader": "^0.27.0",
